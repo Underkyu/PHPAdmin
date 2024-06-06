@@ -14,13 +14,13 @@ class Conexao {
 
         //Excessão para caso ocorra algum erro durante a conexão
         if($this->conexao->connect_error){
-            die("Falha na conexão: " . $this->conexao->connect_error);
+            die("Falha na conexão: " . $this->conexao->connect_error); //Mensagem de erro que é emitida, caso um erro ocorra (Falaha na conexão: + nome do erro)
         }
     }
 
     //Função getter da variável conexao
     public function getConexao(){
-        return $this->conexao;
+        return $this->conexao; //Retorna o valor da variável conexão
     }
 }
 

@@ -101,7 +101,7 @@ class Pessoa{
 
     //Função para inserir os dados da classe pessoa no banco de dados
     public function inserir(){
-        $sql = "INSERT INTO pessoa (`nome`,`endereco`,`bairro`,`cep`,`cidade`,`estado`,`telefone`,`celular`) VALUES(?,?,?,?,?,?,?,?)";  // Declaração SQL que prepara a inserção de dados
+        $sql = "INSERT INTO pessoa(`nome`,`endereco`,`bairro`,`cep`,`cidade`,`estado`,`telefone`,`celular`) VALUES(?,?,?,?,?,?,?,?)";  // Declaração SQL que prepara a inserção de dados
         $stmt = $this->conexao->getConexao()->prepare($sql); //Prepara a declaração anterior
         $stmt->bind_param('ssssssss', $this->nome, $this->endereco, $this->bairro, $this->cep, $this->cidade, $this->estado, $this->telefone, $this->celular); //Insere o dados no banco, relacionando as variveis aos atributos que representam
         return $stmt->execute(); //Executa a declaração e retorna resultado da execução

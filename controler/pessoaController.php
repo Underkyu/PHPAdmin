@@ -8,11 +8,12 @@ class PessoaController{
 
     //Método construtor (executado quando a classe é instanciada)
     public function __construct() {
-
+        
         $this->pessoa = new Pessoa(); //Objeto da classe "Pessoa" é armazenado na variável "pessoa"
-        $this->inserir(); //Função inserir (linha 15)
+        $this->inserir(); //Função inserir (linha 16)
     }
 
+    //Função que insere informações da classe pessoa
     public function inserir(){
     //Pega os valores passados no formulario do arquivo "index.php" e os atribui aos atributos da classe "Pessoa"
     $this->pessoa->setNome($_POST['nome']);
@@ -33,6 +34,8 @@ class PessoaController{
     
     //Executa função "inserir" da classe "Pessoa"
     $this->pessoa->inserir();
+    
+        
     }
 }
 
